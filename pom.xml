@@ -21,12 +21,13 @@
 		<module>spring-boot-grpc-common</module>
 		<module>spring-boot-grpc-server</module>
         <module>spring-boot-grpc-client</module>
-		<module>spring-boot-grpc-client-cli</module>
 	</modules>
 
 	<properties>
 		<java.version>11</java.version>
+		<lombok.version>1.18.10</lombok.version>
 	</properties>
+
 
 	<dependencies>
 		<dependency>
@@ -40,6 +41,16 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
