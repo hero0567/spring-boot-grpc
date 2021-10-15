@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8003
 spring:
   application:
     name: spring-boot-grpc-client
@@ -8,4 +8,6 @@ grpc:
   client:
     spring-boot-grpc-server:
       address: static://127.0.0.1:9898
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
       negotiationType: plaintext
